@@ -2,11 +2,11 @@
 
 ## Navigation
 - `pwd` : print working directory
-- `ls` : list what is in the current directory
+- `ls` : list what is in the current directory (ls .. - lists files in parent directory)
 - `cd ~` : use cd to go to home directory (use cd to move to any directory)
 - `mkdir` : make directory
 - `ls *.txt` : list all files ending with .txt (`* is a wildcard`)
-- `mv` : move file (hello_world)
+- `mv` : move file (mv hello_world.txt ..)
 - `..` : parent directory
   
 ## File commands
@@ -14,8 +14,15 @@
 - `echo` : use echo "Hello World" > hello.txt (add the text "Hello World" to the file named hello.txt)
 - `cat` : used to view the text in a file
 - `cp` : copy (cp hello.txt goodbye.txt - adds the text from hello.txt to goodbye.txt)
+- `rm` : remove (deleted files don't go to recycle)
 
 ## Wildcards
-`*` : matches any number of characters
-`?` : matches any single character
-`[abc]` : Matches any one character listed in the brackets
+- `*` : matches any number of characters
+- `?` : matches any single character
+- `[abc]` : Matches any one character listed in the brackets
+
+## Shortcuts
+- `cat h (plus tab)` : autocompletes to cat hello.txt after you press tab
+- `Ctrl+C` : stop a running command
+- `Ctrl+L` or `clear`: clear terminal
+
