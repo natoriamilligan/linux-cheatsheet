@@ -66,4 +66,11 @@
 -`my_var="Hello, Linux` : to create a **shell** variable
   - use `$` to echo the variable (echo $my_var)
 - `env` : used to find all environment variables
+- `export` : used to create an env variable (export MY_ENV_VAR="Hello!") export makes the variable available to child processes
+- `PATH` : tells the system where to look for executable files
+  - to add a directory to the PATH (export PATH="$PATH:$HOME/my_scripts") adds my_scripts path from your home directory to the PATH env variable
+- `source` : executes and reads commands without restarting the terminal
+- `$SHELL` : specifies the shell you ae using
+- `TERM` : Specifies the type of terminal to emulate when running the shell
+- `unset` : used to unset a variable (even if you unset a var that was added to your bash file, it will recreate in a new terminal)
 
