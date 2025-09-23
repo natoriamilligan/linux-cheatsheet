@@ -26,3 +26,14 @@
 - `Ctrl+C` : stop a running command
 - `Ctrl+L` or `clear`: clear terminal
 
+## Help
+- `man` : guide for commands (q to quit)
+  - Use up and down keys to move through manual
+  - Use `space` to move forward on page
+  - use `b` to move back a page
+  - `/` by a word to find that word
+    - `n` to move to next occurance of word
+    - `N` to move to previous occurance of word
+- `--help` : brief description of a command (ls --help)
+- `apropos` : lists commands and descriptions based off the word provided (used when you aren't sure what command to use)
+  - `apropos file | grep create` : show commands related to file that also mention create
