@@ -23,6 +23,9 @@
 
 ## Shortcuts
 - `cat h (plus tab)` : autocompletes to cat hello.txt after you press tab
+- `cat /etc` : displays file contents in etc
+  - add `| sort` to sort alphabetically
+  - add `|grep -E "admin" to find lines containing the word "admin"
 - `Ctrl+C` : stop a running command
 - `Ctrl+L` or `clear`: clear terminal
 
@@ -37,3 +40,15 @@
 - `--help` : brief description of a command (ls --help)
 - `apropos` : lists commands and descriptions based off the word provided (used when you aren't sure what command to use)
   - `apropos file | grep create` : show commands related to file that also mention create
+ 
+## User Groups and File Permissions
+`whoami` : what is the username of the person logged in
+`sudo` : allows regular users to execute commands as the superuser
+`sudo adduser` : adds a user
+`sudo groupadd` : adds a group
+`id` : lists user ID, group ID, and any groups that the user belongs to
+`sudo usermod -aG party beth` : adds user to a group (usermod modifies user accounts -aG adds user to a group)
+`group` : lists what groups a user is in
+`chown` : change owndership of a file (sudo chown beth:beth /pathToFile)
+`chmod` : change file permissions (sudo chmod 750 /pathToFile -- Owner(7) = Read(4) + Write(2) + Execute(1) Group(5) = Read(4) + Execute(1))
+
