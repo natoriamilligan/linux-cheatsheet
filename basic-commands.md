@@ -3,18 +3,25 @@
 ## Navigation
 - `pwd` : print working directory
 - `ls` : list what is in the current directory (ls .. - lists files in parent directory)
-- `cd ~` : use cd to go to home directory (use cd to move to any directory)
+- `cd` : use cd to go to home directory (use cd to move to any directory)
 - `mkdir` : make directory
 - `ls *.txt` : list all files ending with .txt (`* is a wildcard`)
 - `mv` : move file (mv hello_world.txt ..)
-- `..` : parent directory
+- `..` : parent directory (helps move up the tree)
+- `~` : home directory
+- `-` : go to previous directory
   
 ## File commands
 - `touch newfile.txt` : create an empty file (named newfile.txt)
-- `echo` : use echo "Hello World" > hello.txt (add the text "Hello World" to the file named hello.txt)
+- `echo` : use echo "Hello World" > hello.txt (add the text "Hello World" to the file named hello.txt) (also creates the file if not created yet)
 - `cat` : used to view the text in a file
 - `cp` : copy (cp hello.txt goodbye.txt - adds the text from hello.txt to goodbye.txt)
 - `rm` : remove (deleted files don't go to recycle)
+- `>>` : adds a new line to a file (echo "New line created" >> hello_linux.txt)
+- `tree` : visualizes directories
+- `-p` : makes a parent directory if there isnt one
+- `cp -r` : copy directory and add to another
+- `cat << EOF > nameofdocument.txt` : creates a multiline document
 
 ## Wildcards
 - `*` : matches any number of characters
@@ -27,7 +34,7 @@
   - add `| sort` to sort alphabetically
   - add `|grep -E "admin" to find lines containing the word "admin"
 - `Ctrl+C` : stop a running command
-- `Ctrl+L` or `clear`: clear terminal
+- `Ctrl+L` or `clear`: clear terminalls /home
 
 ## Help
 - `man` : guide for commands (q to quit)
@@ -47,8 +54,8 @@
 `sudo adduser` : adds a user
 `sudo groupadd` : adds a group
 `id` : lists user ID, group ID, and any groups that the user belongs to
-`sudo usermod -aG party beth` : adds user to a group (usermod modifies user accounts -aG adds user to a group)
-`group` : lists what groups a user is in
+`sudo usermod -aG party beth` : adds user to a supplementary group (usermod modifies user accounts -aG adds user to a supp group -g adds use to primary group)
+`groups` : lists what groups a user is in
 `chown` : change owndership of a file (sudo chown beth:beth /pathToFile)
 `chmod` : change file permissions (sudo chmod 750 /pathToFile -- Owner(7) = Read(4) + Write(2) + Execute(1) Group(5) = Read(4) + Execute(1))
 
