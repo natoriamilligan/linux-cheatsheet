@@ -22,6 +22,9 @@
 - `-p` : makes a parent directory if there isnt one
 - `cp -r` : copy directory and add to another
 - `cat << EOF > nameofdocument.txt` : creates a multiline document
+- `nano` : edit a file text editor
+- `find` : searches for files (find . -name "*.txt" -- find all .txt files) find all in the current directory the name that ends with .txt
+- `which` : find the location of executable files
 
 ## Wildcards
 - `*` : matches any number of characters
@@ -58,4 +61,9 @@
 - `groups` : lists what groups a user is in
 - `chown` : change owndership of a file (sudo chown beth:beth /pathToFile)
 - `chmod` : change file permissions (sudo chmod 750 /pathToFile -- Owner(7) = Read(4) + Write(2) + Execute(1) Group(5) = Read(4) + Execute(1))
+
+## Environment Variables
+-`my_var="Hello, Linux` : to create a **shell** variable
+  - use `$` to echo the variable (echo $my_var)
+- `env` : used to find all environment variables
 
