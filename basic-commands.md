@@ -49,13 +49,13 @@
   - `apropos file | grep create` : show commands related to file that also mention create
  
 ## User Groups and File Permissions
-`whoami` : what is the username of the person logged in
-`sudo` : allows regular users to execute commands as the superuser
-`sudo adduser` : adds a user
-`sudo groupadd` : adds a group
-`id` : lists user ID, group ID, and any groups that the user belongs to
-`sudo usermod -aG party beth` : adds user to a supplementary group (usermod modifies user accounts -aG adds user to a supp group -g adds use to primary group)
-`groups` : lists what groups a user is in
-`chown` : change owndership of a file (sudo chown beth:beth /pathToFile)
-`chmod` : change file permissions (sudo chmod 750 /pathToFile -- Owner(7) = Read(4) + Write(2) + Execute(1) Group(5) = Read(4) + Execute(1))
+- `whoami` : what is the username of the person logged in
+- `sudo` : allows regular users to execute commands as the superuser
+- `sudo adduser` : adds a user
+- `sudo groupadd` : adds a group
+- `id` : lists user ID, group ID, and any groups that the user belongs to
+- `sudo usermod -aG party beth` : adds user to a supplementary group (usermod modifies user accounts -aG adds user to a supp group -g adds use to primary group)
+- `groups` : lists what groups a user is in
+- `chown` : change owndership of a file (sudo chown beth:beth /pathToFile)
+- `chmod` : change file permissions (sudo chmod 750 /pathToFile -- Owner(7) = Read(4) + Write(2) + Execute(1) Group(5) = Read(4) + Execute(1))
 
