@@ -92,3 +92,8 @@
 - `TERM` : Specifies the type of terminal to emulate when running the shell
 - `unset` : used to unset a variable (even if you unset a var that was added to your bash file, it will recreate in a new terminal)
 
+## Disk Management
+- `df` : check disk space usage (add -h to make it more readable)
+- `du ~` : lists the space usage for every file in home (add -sh before ~ to "summarize" to show total size of everything in home directory)
+- 
+
