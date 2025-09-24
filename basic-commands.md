@@ -25,6 +25,22 @@
 - `nano` : edit a file text editor
 - `find` : searches for files (find . -name "*.txt" -- find all .txt files) find all in the current directory the name that ends with .txt
 - `which` : find the location of executable files
+- `{dir1,dir2}` : putting curly braces around multiple directories creates subdirectories in a directory of your choice
+  Packaging and Compression
+
+## File Archiving and Compression
+- `tar` : used to create an archive
+  - `-cvf` : c tells tar to create a new archive, v (verbose) prints out the names of the files going in the archive (optional) f is followed by the name of    the archive
+  - the archive name needs to have the extension `.tar` Ex. tar -cvf test_archive.tar test_dir
+  - to view the contents of the archive, just remove the name of the folder you are archiving
+  - `-xvf` : x extracts the archive. -C nameofadirectory added after extracting adds the extracted files to the new directory. (tar -xvf test_archive.tar -C    extracted_tar)
+  - `gzip` : use before the name of the directory you want to compress to compress it. The new directory will end in .tar.gz
+  - `ls -lh nameofarchive.tar.gz` : shows the size of the archive in a readable format.
+  - You can also compress and archive at the same time (tar -czvf test_combined.tar.gz test_dir)
+  - Change the c for t to view the contents without extracting (tar -czvf test_combined.tar.gz test_dir)
+ - `zip` : to create a zip archive (more compatible for Windows)
+   - `-r` : tells zip to work recursively
+   - `unzip -d` : unzips the file (-d specifies the directory the zip files will go into, just name after the d. If there is no name, unzip will create it)
 
 ## Wildcards
 - `*` : matches any number of characters
@@ -38,6 +54,8 @@
   - add `|grep -E "admin" to find lines containing the word "admin"
 - `Ctrl+C` : stop a running command
 - `Ctrl+L` or `clear`: clear terminalls /home
+- `$(date +%Y-%m-%d)` : to get todays date. Remove the dollar sign and parentheses if alone
+- 
 
 ## Help
 - `man` : guide for commands (q to quit)
