@@ -34,6 +34,8 @@
 - `wc` : word count -l count lines -w count words
 - `sort` : sorts alphabetically. (-t defines the delimiter -n sort numerically -k3 sort by 3rd field (k specifies the key or field)
 - `uniq` : removes or identifies duplicate lines. -c prefixes lines with the number of occurences
+- `tr` : translate, used for translating or deleting characters. -d means delete characters -s removes duplicate letters in a string
+  - echo 'hello labex' | tr '[:lower:]' '[:upper:]' lower case to lower case
   
 
 ## File Archiving and Compression
