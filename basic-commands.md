@@ -26,9 +26,15 @@
 - `find` : searches for files (find . -name "*.txt" -- find all .txt files) find all in the current directory the name that ends with .txt
 - `which` : find the location of executable files
 - `{dir1,dir2}` : putting curly braces around multiple directories creates subdirectories in a directory of your choice
-  Packaging and Compression
+  ### Packaging and Compression
   `cut` : ONLY USED ON FILES! extract portions of lines (use a delimiter `-d:` uses a colon for fields since that is what separates fields in the program. you can select portions by fields -f 1,6 (fields 1 and 6 or by character positions `-c 1-5` shows 1-5 characters for each line in a file)
-  -`head -n 6` : displays the first 6 lines in a file
+
+## Useful commands
+- `head -n 6` : displays the first 6 lines in a file
+- `wc` : word count -l count lines -w count words
+- `sort` : sorts alphabetically. (-t defines the delimiter -n sort numerically -k3 sort by 3rd field (k specifies the key or field)
+- `uniq` : removes or identifies duplicate lines. -c prefixes lines with the number of occurences
+  
 
 ## File Archiving and Compression
 - `tar` : used to create an archive
