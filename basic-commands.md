@@ -27,6 +27,8 @@
 - `which` : find the location of executable files
 - `{dir1,dir2}` : putting curly braces around multiple directories creates subdirectories in a directory of your choice
   Packaging and Compression
+  `cut` : ONLY USED ON FILES! extract portions of lines (use a delimiter `-d:` uses a colon for fields since that is what separates fields in the program. you can select portions by fields -f 1,6 (fields 1 and 6 or by character positions `-c 1-5` shows 1-5 characters for each line in a file)
+  -`head -n 6` : displays the first 6 lines in a file
 
 ## File Archiving and Compression
 - `tar` : used to create an archive
@@ -55,7 +57,8 @@
 - `Ctrl+C` : stop a running command
 - `Ctrl+L` or `clear`: clear terminalls /home
 - `$(date +%Y-%m-%d)` : to get todays date. Remove the dollar sign and parentheses if alone
-- 
+- `^d` : means starts with the letter d
+- `wc -l` : outputs number of lines
 
 ## Help
 - `man` : guide for commands (q to quit)
@@ -93,7 +96,21 @@
 - `unset` : used to unset a variable (even if you unset a var that was added to your bash file, it will recreate in a new terminal)
 
 ## Disk Management
-- `df` : check disk space usage (add -h to make it more readable)
-- `du ~` : lists the space usage for every file in home (add -sh before ~ to "summarize" to show total size of everything in home directory)
-- 
+- `df ~` : check disk space usage (add -h to make it more readable)
+- `du ~` : lists the space usage for every file in home (add -sh before ~ to "summarize" to show total size of everything in the directory)
+- `du -h --max-depth=1 ~` : shows size of subdirectories 1 level deep
+- `du -sh ~/*` : shows size of all non-hidden files and directories under home
+
+  ### Virtual Disks
+  - `dd if=/dev/zero of=virtual.img bs=1M count=256` : `dd` to copy and convert files `if=/dev/zero` input file that provides endless zeros `of=virtual.img` is the output file `bs=1M` block size is 1 megabyte therefore `count=256` will result in 256MB for the file
+  - `sudo mkfs.ext4 virtual.img` : after setting up a virtual disk you need to add a filesystem to it. Here we added the ext4 filesystem
+  - `sudo mkdir mnt/vdisk` : make a directory for the virtual disk (`mnt` is a directory commonly used to mounting filesystems)
+  - `sudo mount -o loop virtual.img /mnt/virtualdisk` : command to mount the vdisk.img (the filesystem) to the directory you created (`-o loop` tells the system to treat the file as if it were a real disk)
+  - `sudo umount /mnt/virtualdisk` : to unmount the filesystem from the directory
+ 
+## Pipelines
+  - `&&` : logical AND operator, used in between commands to run commands in order if the preceding command succeeds
+  - `||` : or operator
+  - `which` : checks if a program is installed when you name the program after which
+
 
