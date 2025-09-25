@@ -37,7 +37,7 @@
 
 ## Text Processing
 - `tr` : translate, used for translating or deleting characters. -d means delete characters -s removes duplicate letters in a string
-  - echo 'hello labex' | tr '[:lower:]' '[:upper:]' lower case to lower case
+  - echo 'hello labex' | tr '[:lower:]' '[:upper:]' lower case to lower case. you can translate one symbol to another
 - `col` : converts text (-x converts tabs to spaces)
 - `join` : used to join files based on common fields
 - `paste` : merge lines of files (can use a delimiter `-d ':'` to separates fields, -s shows content of each file on a single line)
@@ -103,6 +103,7 @@
 - `export` : used to create an env variable (export MY_ENV_VAR="Hello!") export makes the variable available to child processes
 - `PATH` : tells the system where to look for executable files
   - to add a directory to the PATH (export PATH="$PATH:$HOME/my_scripts") adds my_scripts path from your home directory to the PATH env variable
+  - ` echo "$PATH"` : list the entire PATH
 - `source` : executes and reads commands without restarting the terminal
 - `$SHELL` : specifies the shell you ae using
 - `TERM` : Specifies the type of terminal to emulate when running the shell
@@ -126,4 +127,8 @@
   - `||` : or operator
   - `which` : checks if a program is installed when you name the program after which
 
+## Redirection
+  -If there you get an error when trying to open a file that is non existent, you can redirect the stderr to a log. (cat Documents/test.c nonexistent.c > output.log 2> error.log)
+    -this is how you can add both the stdout and stderr to one file (ls -l . nonexistent_directory > combined_output.log 2>&1) this is the shorthand way (ls -l . nonexistent_directory &> another_combined_output.log)
+-`/dev/null/` : special file that acts like a black hole. Any data written to /dev/null is discarded, making it useful for suppressing command output
 
