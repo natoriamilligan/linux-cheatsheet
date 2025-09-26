@@ -33,7 +33,7 @@
 - `head -n 6` : displays the first 6 lines in a file
 - `wc` : word count -l count lines -w count words
 - `sort` : sorts alphabetically. (-t defines the delimiter -n sort numerically -k3 sort by 3rd field (k specifies the key or field)
-- `uniq` : removes or identifies duplicate lines. -c prefixes lines with the number of occurences
+- `uniq` : removes or identifies duplicate lines. -c prefixes lines with the number of occurences. **Can only remove occurances if they are right next to each other so you have to `sort` first**
 
 ## Text Processing
 - `tr` : translate, used for translating or deleting characters. -d means delete characters -s removes duplicate letters in a string
