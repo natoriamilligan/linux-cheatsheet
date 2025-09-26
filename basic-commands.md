@@ -48,7 +48,7 @@
   - The forward slash (/) is the delimiter but if forward slash is in your test you can use other delimiters (sed 's#/path/to/file#/new/path#g' filename)
   - sed '$a\Last line' , sed '1i\First line'
   - -e allows you to specify multiple sed commands
-  - `awk` : treats each line as its own entity and each word as its own field
+-echo `awk` : treats each line as its own entity and each word as its own field
   
 
 ## File Archiving and Compression
@@ -140,3 +140,11 @@
     -this is how you can add both the stdout and stderr to one file (ls -l . nonexistent_directory > combined_output.log 2>&1) this is the shorthand way (ls -l . nonexistent_directory &> another_combined_output.log)
 -`/dev/null/` : special file that acts like a black hole. Any data written to /dev/null is discarded, making it useful for suppressing command output
 
+## Installing Software
+  - `sudo apt update` : Its important to update the package list befrore installing new software `sudo apt update`
+  - `sudo apt upgrade` : upgrades all packages that need it -y to say yes to all prompts
+  - verify software is installed by `softwareName -version`
+  - `apt-cache search "short description of software (keywords)" for specific searching for a software you dont know the name of
+    - use grep to narrow down search (apt-cache search "text editor" | grep -i gui)
+  - `apt remove` : sudo apt remove w3m -y (`sudo apt purge w3m -y` to remove configuration files as well)
+    - `sudo apt autoremove -y` : removes packages that were automatically installed to satisfy dependencies for other packages and are now no longer needed
