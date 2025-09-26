@@ -34,6 +34,7 @@
 - `wc` : word count -l count lines -w count words
 - `sort` : sorts alphabetically. (-t defines the delimiter -n sort numerically -k3 sort by 3rd field (k specifies the key or field)
 - `uniq` : removes or identifies duplicate lines. -c prefixes lines with the number of occurences. **Can only remove occurances if they are right next to each other so you have to `sort` first**
+- `grep` : -n prefix lines with their line number -i make case insensitive
 
 ## Text Processing
 - `tr` : translate, used for translating or deleting characters. -d means delete characters -s removes duplicate letters in a string
@@ -41,6 +42,13 @@
 - `col` : converts text (-x converts tabs to spaces)
 - `join` : used to join files based on common fields
 - `paste` : merge lines of files (can use a delimiter `-d ':'` to separates fields, -s shows content of each file on a single line)
+- `echo -e` : -e allows escape characters
+- `sed` : replaces text (format: sed 's/ThingtoChange/ThingtoChangeTo/(optional change)') -g global which will change every occurence, without this sed will just change the first occurence on each line.
+  - Remember that these commands dont modify the test, only print to the terminal, if you want to modify, use -i after sed.
+  - The forward slash (/) is the delimiter but if forward slash is in your test you can use other delimiters (sed 's#/path/to/file#/new/path#g' filename)
+  - sed '$a\Last line' , sed '1i\First line'
+  - -e allows you to specify multiple sed commands
+  - `awk` : treats each line as its own entity and each word as its own field
   
 
 ## File Archiving and Compression
