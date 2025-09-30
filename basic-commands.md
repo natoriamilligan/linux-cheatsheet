@@ -57,7 +57,7 @@
   - the archive name needs to have the extension `.tar` Ex. tar -cvf test_archive.tar test_dir
   - to view the contents of the archive, just remove the name of the folder you are archiving
   - `-xvf` : x extracts the archive. -C nameofadirectory added after extracting adds the extracted files to the new directory. (tar -xvf test_archive.tar -C    extracted_tar)
-  - `gzip` : use before the name of the directory you want to compress to compress it. The new directory will end in .tar.gz
+  - `gzip` : use before the name of the file (archived or not) that you want to compress to compress it. The new directory will end in .tar.gz
   - `ls -lh nameofarchive.tar.gz` : shows the size of the archive in a readable format.
   - You can also compress and archive at the same time (tar -czvf test_combined.tar.gz test_dir)
   - Change the c for t to view the contents without extracting (tar -czvf test_combined.tar.gz test_dir)
