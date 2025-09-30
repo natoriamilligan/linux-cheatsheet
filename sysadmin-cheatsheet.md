@@ -4,3 +4,4 @@
   - -a : to diplay all information on the OS
 - `uptime` : shows system uptime and load average
 - `top` : to check CPU and memory usage
+- `ps` : lists all user running processes
