@@ -96,13 +96,18 @@
 ## User Groups and File Permissions
 - `whoami` : what is the username of the person logged in
 - `sudo` : allows regular users to execute commands as the superuser
-- `sudo adduser` : adds a user
+- `sudo adduser or (useradd)` : adds a user (-m to create a directory for that user)
+- `sudo passwd name_of_user` : add a password for the user
+- `sudo userdel name_of_user` : delete a user
+- `sudo usermod -L` : lock a user
+  - `sudo passwd -l` : to lock the password as well if you want
 - `sudo groupadd` : adds a group
 - `id` : lists user ID, group ID, and any groups that the user belongs to
 - `sudo usermod -aG party beth` : adds user to a supplementary group (usermod modifies user accounts -aG adds user to a supp group -g adds use to primary group)
 - `groups` : lists what groups a user is in
-- `chown` : change owndership of a file (sudo chown beth:beth /pathToFile)
+- `chown` : change owndership of a file (sudo chown beth:beth /pathToFile) (group changing is after the colon)
 - `chmod` : change file permissions (sudo chmod 750 /pathToFile -- Owner(7) = Read(4) + Write(2) + Execute(1) Group(5) = Read(4) + Execute(1))
+- setgit (set group id) is a special permission. add a 2 in front of permission numbers Ex. 2770. to set the group. Allows users to execute files using the permissions of the group that owns it. Or in s directory, users can create them but the group ownerships will be inherited by that file an not the users group
 
 ## Environment Variables
 -`my_var="Hello, Linux` : to create a **shell** variable
