@@ -59,8 +59,7 @@
   - `-xvf` : x extracts the archive. -C nameofadirectory added after extracting adds the extracted files to the new directory. (tar -xvf test_archive.tar -C    extracted_tar) (before the -C you can specify the exact file you want to extract instead of extracting the entire file)
   - `tar -czvf test_combined.tar.gz test_dir` : You can also compress and archive at the same time
   - `tar -czvf` archivename.tar.gz -T listfileName` : -T takes the list from the filename and then uses that list to archive everything from those            directories
-  - `
-* * * * * tar -czf /home/labex/project/backups/backup-$(date +\%Y-\%m-\%d_\%H-\%M-\%S).tar.gz -C /home/labex/project data config logs` : this is in the nano editor if you are needing to do automatic backup logs using `crontab -e  
+  - ` (five astricks first with spaces) tar -czf /home/labex/project/backups/backup-$(date +\%Y-\%m-\%d_\%H-\%M-\%S).tar.gz -C /home/labex/project data config logs` : this is in the nano editor if you are needing to do automatic backup logs using `crontab -e  
   - `gzip` : use before the name of the file (archived or not) that you want to compress to compress it. The new directory will end in .tar.gz
   - `ls -lh nameofarchive.tar.gz` : shows the size of the archive in a readable format
   - Change the c for t to view the contents without extracting (tar -czvf test_combined.tar.gz test_dir)
