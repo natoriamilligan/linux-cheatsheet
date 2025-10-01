@@ -109,6 +109,7 @@
 - `groups` : lists what groups a user is in
 - `chown` : change owndership of a file (sudo chown beth:beth /pathToFile) (group changing is after the colon)
 - `chmod` : change file permissions (sudo chmod 750 /pathToFile -- Owner(7) = Read(4) + Write(2) + Execute(1) Group(5) = Read(4) + Execute(1))
+  - `+x` : will immediately give the owner execute permissions
 - setgit (set group id) is a special permission. add a 2 in front of permission numbers Ex. 2770. to set the group. Allows users to execute files using the permissions of the group that owns it. Or in s directory, users can create them but the group ownerships will be inherited by that file an not the users group
 
 ## Environment Variables
