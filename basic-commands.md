@@ -56,10 +56,13 @@
   - `-cvf` : c tells tar to create a new archive, v (verbose) prints out the names of the files going in the archive (optional) f is followed by the name of    the archive
   - the archive name needs to have the extension `.tar` Ex. tar -cvf test_archive.tar test_dir
   - to view the contents of the archive, just remove the name of the folder you are archiving
-  - `-xvf` : x extracts the archive. -C nameofadirectory added after extracting adds the extracted files to the new directory. (tar -xvf test_archive.tar -C    extracted_tar)
+  - `-xvf` : x extracts the archive. -C nameofadirectory added after extracting adds the extracted files to the new directory. (tar -xvf test_archive.tar -C    extracted_tar) (before the -C you can specify the exact file you want to extract instead of extracting the entire file)
+  - `tar -czvf test_combined.tar.gz test_dir` : You can also compress and archive at the same time
+  - `tar -czvf` archivename.tar.gz -T listfileName` : -T takes the list from the filename and then uses that list to archive everything from those            directories
+  - `
+* * * * * tar -czf /home/labex/project/backups/backup-$(date +\%Y-\%m-\%d_\%H-\%M-\%S).tar.gz -C /home/labex/project data config logs` : this is in the nano editor if you are needing to do automatic backup logs using `crontab -e  
   - `gzip` : use before the name of the file (archived or not) that you want to compress to compress it. The new directory will end in .tar.gz
-  - `ls -lh nameofarchive.tar.gz` : shows the size of the archive in a readable format.
-  - You can also compress and archive at the same time (tar -czvf test_combined.tar.gz test_dir)
+  - `ls -lh nameofarchive.tar.gz` : shows the size of the archive in a readable format
   - Change the c for t to view the contents without extracting (tar -czvf test_combined.tar.gz test_dir)
  - `zip` : to create a zip archive (more compatible for Windows)
    - `-r` : tells zip to work recursively
@@ -146,10 +149,12 @@
 -`/dev/null/` : special file that acts like a black hole. Any data written to /dev/null is discarded, making it useful for suppressing command output
 
 ## Installing Software
-  - `sudo apt update` : Its important to update the package list befrore installing new software `sudo apt update`
+  - `sudo apt update` : Its important to update the package list before installing new software `sudo apt update`
   - `sudo apt upgrade` : upgrades all packages that need it -y to say yes to all prompts
   - verify software is installed by `softwareName -version`
   - `apt-cache search "short description of software (keywords)" for specific searching for a software you dont know the name of
     - use grep to narrow down search (apt-cache search "text editor" | grep -i gui)
   - `apt remove` : sudo apt remove w3m -y (`sudo apt purge w3m -y` to remove configuration files as well)
-    - `sudo apt autoremove -y` : removes packages that were automatically installed to satisfy dependencies for other packages and are now no longer needed
+  - `sudo apt autoremove -y` : removes packages that were automatically installed to satisfy dependencies for other packages and are now no longer needed
+  - `dpkg -s nameOfPkg` or `sudo apt show nameOfPkg` : to show package details
+  - 
