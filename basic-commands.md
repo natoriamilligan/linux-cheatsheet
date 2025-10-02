@@ -6,7 +6,7 @@
 - `cd` : use cd to go to home directory (use cd to move to any directory)
 - `mkdir` : make directory
 - `ls *.txt` : list all files ending with .txt (`* is a wildcard`)
-- `mv` : move file (mv hello_world.txt ..)
+- `mv` : move file or rename (mv hello_world.txt ..)
 - `..` : parent directory (helps move up the tree)
 - `~` : home directory
 - `-` : go to previous directory
