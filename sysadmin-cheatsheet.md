@@ -4,6 +4,7 @@
   - -a : to diplay all information on the OS
 - `uptime` : shows system uptime and load average
 - `top` : to check CPU and memory usage
+- `free` : provides memory usage stats
 - `ps` : lists all user running processes
 - `pgrep -f running_process.sh` : locates the PID for the process that is running
 - `pkill running_procees.sh` : to force a process to terminate
